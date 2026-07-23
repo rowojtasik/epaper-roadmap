@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
+<html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ePaper App · Roadmap</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -757,9 +756,9 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 }
 </style>
 </head>
-<body>
+<body class="">
 
-<div class="tooltip" id="tt"><div class="tt-t" id="ttT"></div><div class="tt-m" id="ttM"></div></div>
+<div class="tooltip" id="tt" style="left: 891px; top: 188px;"><div class="tt-t" id="ttT">Fixes &amp; adjustments</div><div class="tt-m" id="ttM">KW 23 – KW 35</div></div>
 
 <!-- APP HEADER -->
 <header class="app-hdr">
@@ -767,15 +766,15 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
   <div class="hdr-l">
     <div class="logo-wrap">
       <div class="logo" onclick="toggleLogoMenu(event)" title="Links">📱</div>
-      <svg class="logo-chevron" onclick="toggleLogoMenu(event)" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      <svg class="logo-chevron" onclick="toggleLogoMenu(event)" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       <div class="logo-menu" id="logoMenu">
         <a class="logo-menu-item" href="https://vitecvisiolink.notion.site/?v=a1581998d20c40678ff9921a308f8268" target="_blank" rel="noopener">
           <span>Modular Platform Configuration</span>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
         <a class="logo-menu-item" href="https://vitecvisiolink.notion.site/2172967a545e809398c8f24594476217?v=2e32967a545e80ae8232000c25c1377d" target="_blank" rel="noopener">
           <span>Visiolink Roadmap</span>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
       </div>
     </div>
@@ -784,17 +783,17 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
   <!-- Center: Title + current-week chip (absolutely centered) -->
   <div class="hdr-center">
     <div class="hdr-title">Rumble goes <em>modular</em></div>
-    <div class="kw-chip"><span class="kw-badge" id="kwBadge">KW –</span><span id="kwDate">–</span></div>
+    <div class="kw-chip"><span class="kw-badge" id="kwBadge">KW 30</span><span id="kwDate">23. Jul 2026</span></div>
   </div>
 
   <!-- Right: Buttons -->
   <div class="hdr-r">
     <div class="edit-pill" id="editPill">✏️</div>
-    <button class="btn btn-ghost" id="editBtn" onclick="openAuth()">✏️ Edit</button>
-    <button class="btn btn-ghost" id="panelBtn" style="display:none" onclick="openOverview()" title="Bearbeitungsübersicht öffnen">✏️ Edit</button>
-    <button class="btn btn-pub" id="pubBtn" style="display:none" onclick="publish()">💾 Save</button>
-    <button class="btn btn-ghost" id="ghBtn" style="display:none;font-size:12px;color:var(--muted)" onclick="openGhSettings()" title="GitHub Pages einrichten">⚙️ GitHub</button>
-    <button class="btn btn-ghost" id="exitBtn" style="display:none" onclick="exitEdit()">✕ Close</button>
+    <button class="btn btn-ghost" id="editBtn" onclick="openAuth()" style="">✏️ Edit</button>
+    <button class="btn btn-ghost" id="panelBtn" style="display: none;" onclick="openOverview()" title="Bearbeitungsübersicht öffnen">✏️ Edit</button>
+    <button class="btn btn-pub" id="pubBtn" style="display: none;" onclick="publish()" title="Pushed zu GitHub Pages: https://rowojtasik.github.io/epaper-roadmap/" disabled=""><span class="spin">⟳</span></button>
+    <button class="btn btn-ghost" id="ghBtn" style="display: none; font-size: 12px; color: var(--accent);" onclick="openGhSettings()" title="GitHub Pages einrichten">⚙️ GitHub ✓</button>
+    <button class="btn btn-ghost" id="exitBtn" style="display: none;" onclick="exitEdit()">✕ Close</button>
   </div>
 </header>
 
@@ -805,29 +804,293 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
   <button class="tab-btn" id="tabBugs" onclick="switchTab('bugs')">🐛 Bugs</button>
   <button class="tab-btn" id="tabBacklog" onclick="switchTab('backlog')">📋 Backlog</button>
   <div class="tab-stand">
-    <div class="stand-chip"><div class="live-dot"></div><span id="standTxt">Stand: –</span></div>
+    <div class="stand-chip"><div class="live-dot"></div><span id="standTxt">Stand: 23. Juli 2026</span></div>
   </div>
 </nav>
 
 <!-- GANTT SCROLL ZONE -->
 <div class="gantt-zone">
-  <div class="gantt-table" id="ganttTable"></div>
+  <div class="gantt-table" id="ganttTable"><div class="g-hdr"><div class="hdr-corner"></div><div class="hdr-weeks"><div class="month-row"><div class="mo-blk" style="width: 70px;">Apr</div><div class="mo-blk" style="width: 280px;">Mai</div><div class="mo-blk" style="width: 350px;">Jun</div><div class="mo-blk" style="width: 280px;">Jul</div><div class="mo-blk" style="width: 350px;">Aug</div><div class="mo-blk" style="width: 280px;">Sep</div><div class="mo-blk" style="width: 280px;">Okt</div><div class="mo-blk" style="width: 350px;">Nov</div><div class="mo-blk" style="width: 280px;">Dez</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65); border-left: 2px solid rgba(165, 180, 252, 0.3);">Jan '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Feb '27</div><div class="mo-blk" style="width: 350px; color: rgba(165, 180, 252, 0.65);">Mär '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Apr '27</div><div class="mo-blk" style="width: 350px; color: rgba(165, 180, 252, 0.65);">Mai '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Jun '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Jul '27</div><div class="mo-blk" style="width: 350px; color: rgba(165, 180, 252, 0.65);">Aug '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Sep '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Okt '27</div><div class="mo-blk" style="width: 350px; color: rgba(165, 180, 252, 0.65);">Nov '27</div><div class="mo-blk" style="width: 280px; color: rgba(165, 180, 252, 0.65);">Dez '27</div></div><div class="week-row"><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW18</span><span class="wk-d">27.Apr.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW19</span><span class="wk-d">4.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW20</span><span class="wk-d">11.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW21</span><span class="wk-d">18.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW22</span><span class="wk-d">25.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW23</span><span class="wk-d">1.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW24</span><span class="wk-d">8.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW25</span><span class="wk-d">15.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW26</span><span class="wk-d">22.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW27</span><span class="wk-d">29.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW28</span><span class="wk-d">6.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW29</span><span class="wk-d">13.Jul.</span></div><div class="wk-cell cur" style="width: 70px;"><span class="wk-n">KW30</span><span class="wk-d">20.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW31</span><span class="wk-d">27.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW32</span><span class="wk-d">3.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW33</span><span class="wk-d">10.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW34</span><span class="wk-d">17.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW35</span><span class="wk-d">24.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW36</span><span class="wk-d">31.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW37</span><span class="wk-d">7.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW38</span><span class="wk-d">14.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW39</span><span class="wk-d">21.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW40</span><span class="wk-d">28.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW41</span><span class="wk-d">5.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW42</span><span class="wk-d">12.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW43</span><span class="wk-d">19.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW44</span><span class="wk-d">26.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW45</span><span class="wk-d">2.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW46</span><span class="wk-d">9.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW47</span><span class="wk-d">16.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW48</span><span class="wk-d">23.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW49</span><span class="wk-d">30.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW50</span><span class="wk-d">7.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW51</span><span class="wk-d">14.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW52</span><span class="wk-d">21.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW53</span><span class="wk-d">28.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW1</span><span class="wk-d">4.Jan.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW2</span><span class="wk-d">11.Jan.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW3</span><span class="wk-d">18.Jan.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW4</span><span class="wk-d">25.Jan.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW5</span><span class="wk-d">1.Feb.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW6</span><span class="wk-d">8.Feb.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW7</span><span class="wk-d">15.Feb.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW8</span><span class="wk-d">22.Feb.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW9</span><span class="wk-d">1.Mär.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW10</span><span class="wk-d">8.Mär.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW11</span><span class="wk-d">15.Mär.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW12</span><span class="wk-d">22.Mär.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW13</span><span class="wk-d">29.Mär.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW14</span><span class="wk-d">5.Apr.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW15</span><span class="wk-d">12.Apr.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW16</span><span class="wk-d">19.Apr.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW17</span><span class="wk-d">26.Apr.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW18</span><span class="wk-d">3.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW19</span><span class="wk-d">10.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW20</span><span class="wk-d">17.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW21</span><span class="wk-d">24.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW22</span><span class="wk-d">31.Mai.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW23</span><span class="wk-d">7.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW24</span><span class="wk-d">14.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW25</span><span class="wk-d">21.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW26</span><span class="wk-d">28.Jun.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW27</span><span class="wk-d">5.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW28</span><span class="wk-d">12.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW29</span><span class="wk-d">19.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW30</span><span class="wk-d">26.Jul.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW31</span><span class="wk-d">2.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW32</span><span class="wk-d">9.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW33</span><span class="wk-d">16.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW34</span><span class="wk-d">23.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW35</span><span class="wk-d">30.Aug.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW36</span><span class="wk-d">6.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW37</span><span class="wk-d">13.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW38</span><span class="wk-d">20.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW39</span><span class="wk-d">27.Sep.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW40</span><span class="wk-d">4.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW41</span><span class="wk-d">11.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW42</span><span class="wk-d">18.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW43</span><span class="wk-d">25.Okt.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW44</span><span class="wk-d">1.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW45</span><span class="wk-d">8.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW46</span><span class="wk-d">15.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW47</span><span class="wk-d">22.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW48</span><span class="wk-d">29.Nov.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW49</span><span class="wk-d">6.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW50</span><span class="wk-d">13.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW51</span><span class="wk-d">20.Dez.</span></div><div class="wk-cell" style="width: 70px;"><span class="wk-n">KW52</span><span class="wk-d">27.Dez.</span></div></div></div></div><div class="g-row"><div class="cat-col" style="min-height: 106px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#2563eb;min-height:86px"></div>
+      <span class="cat-name">Configuration &amp; development</span>
+      <button class="cat-ebtn" onclick="openCatDirect('config-dev')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 106px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-bar" style="left: 2px; width: 696px; top: 12px; background: linear-gradient(135deg, rgb(92, 154, 255), rgb(37, 99, 235)); color: white; border-radius: 8px;">Configuration &amp; development</div><div class="g-bar" style="left: 352px; width: 906px; top: 54px; background: linear-gradient(135deg, rgb(92, 154, 255), rgb(37, 99, 235)); color: white; border-radius: 8px;">Fixes &amp; adjustments</div></div></div></div><div class="g-row alt"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#7c3aed;min-height:52px"></div>
+      <span class="cat-name">Visiolink QA</span>
+      <button class="cat-ebtn" onclick="openCatDirect('visiolink-qa')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-bar" style="left: 282px; width: 836px; top: 21px; background: linear-gradient(135deg, rgb(179, 113, 255), rgb(124, 58, 237)); color: white; border-radius: 8px;">Testruns of completed areas</div></div></div></div><div class="g-row"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#0891b2;min-height:52px"></div>
+      <span class="cat-name">Release to Rumble</span>
+      <button class="cat-ebtn" onclick="openCatDirect('release')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-ms" id="ms-item-r_ex1" style="left: 368px; top: 36px; transform: translateY(-50%);"><div class="ms-circle" style="border-color:#0891b2;background:#0891b220"><div class="ms-circle-dot" style="background:#0891b2"></div></div><div class="ms-lbl">Release MZ Pt. 1</div></div><div class="g-ms" id="ms-item-iug6jm1w" style="left: 648px; top: 36px; transform: translateY(-50%);"><div class="ms-circle" style="border-color:#0891b2;background:#0891b220"><div class="ms-circle-dot" style="background:#0891b2"></div></div><div class="ms-lbl">Release MZ Pt.2</div></div><div class="g-ms" id="ms-item-i00xippa" style="left: 998px; top: 36px; transform: translateY(-50%);"><div class="ms-circle" style="border-color:#0891b2;background:#0891b220"><div class="ms-circle-dot" style="background:#0891b2"></div></div><div class="ms-lbl">Full Release MZ</div></div></div></div></div><div class="g-row alt"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#0d9488;min-height:52px"></div>
+      <span class="cat-name">Rumble QA</span>
+      <button class="cat-ebtn" onclick="openCatDirect('customer-qa')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-bar" style="left: 352px; width: 136px; top: 21px; background: linear-gradient(135deg, rgb(68, 203, 191), rgb(13, 148, 136)); color: white; border-radius: 8px;">Test MZ Pt. 1</div><div class="g-bar" style="left: 632px; width: 206px; top: 21px; background: linear-gradient(135deg, rgb(68, 203, 191), rgb(13, 148, 136)); color: white; border-radius: 8px;">Test MZ Pt.2</div></div></div></div><div class="g-row"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#d97706;min-height:52px"></div>
+      <span class="cat-name">Submit</span>
+      <button class="cat-ebtn" onclick="openCatDirect('submit')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-ms" id="ms-item-ip0eapta" style="left: 1208px; top: 36px; transform: translateY(-50%);"><div class="ms-circle" style="border-color:#d97706;background:white"><img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover"></div><div class="ms-lbl">Submit MZ</div></div></div></div></div><div class="g-row alt"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#16a34a;min-height:52px"></div>
+      <span class="cat-name">Roll out and clones</span>
+      <button class="cat-ebtn" onclick="openCatDirect('rollout')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div></div></div></div><div class="g-row"><div class="cat-col" style="min-height: 72px;"><div class="cat-inner">
+      <div class="cat-bar" style="background:#e11d48;min-height:52px"></div>
+      <span class="cat-name">Hypercare</span>
+      <button class="cat-ebtn" onclick="openCatDirect('hypercare')">✎</button>
+    </div></div><div class="row-tl"><div class="row-inner" style="width: 6160px; min-height: 72px;"><div class="wk-bg alt" style="left: 0px; width: 70px;"></div><div class="wk-bg mo" style="left: 70px; width: 70px;"></div><div class="wk-bg alt" style="left: 140px; width: 70px;"></div><div class="wk-bg" style="left: 210px; width: 70px;"></div><div class="wk-bg alt" style="left: 280px; width: 70px;"></div><div class="wk-bg mo" style="left: 350px; width: 70px;"></div><div class="wk-bg alt" style="left: 420px; width: 70px;"></div><div class="wk-bg" style="left: 490px; width: 70px;"></div><div class="wk-bg alt" style="left: 560px; width: 70px;"></div><div class="wk-bg" style="left: 630px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 700px; width: 70px;"></div><div class="wk-bg" style="left: 770px; width: 70px;"></div><div class="wk-bg alt" style="left: 840px; width: 70px;"></div><div class="wk-bg" style="left: 910px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 980px; width: 70px;"></div><div class="wk-bg" style="left: 1050px; width: 70px;"></div><div class="wk-bg alt" style="left: 1120px; width: 70px;"></div><div class="wk-bg" style="left: 1190px; width: 70px;"></div><div class="wk-bg alt" style="left: 1260px; width: 70px;"></div><div class="wk-bg mo" style="left: 1330px; width: 70px;"></div><div class="wk-bg alt" style="left: 1400px; width: 70px;"></div><div class="wk-bg" style="left: 1470px; width: 70px;"></div><div class="wk-bg alt" style="left: 1540px; width: 70px;"></div><div class="wk-bg mo" style="left: 1610px; width: 70px;"></div><div class="wk-bg alt" style="left: 1680px; width: 70px;"></div><div class="wk-bg" style="left: 1750px; width: 70px;"></div><div class="wk-bg alt" style="left: 1820px; width: 70px;"></div><div class="wk-bg mo" style="left: 1890px; width: 70px;"></div><div class="wk-bg alt" style="left: 1960px; width: 70px;"></div><div class="wk-bg" style="left: 2030px; width: 70px;"></div><div class="wk-bg alt" style="left: 2100px; width: 70px;"></div><div class="wk-bg" style="left: 2170px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2240px; width: 70px;"></div><div class="wk-bg" style="left: 2310px; width: 70px;"></div><div class="wk-bg alt" style="left: 2380px; width: 70px;"></div><div class="wk-bg" style="left: 2450px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2520px; width: 70px;"></div><div class="wk-bg" style="left: 2590px; width: 70px;"></div><div class="wk-bg alt" style="left: 2660px; width: 70px;"></div><div class="wk-bg" style="left: 2730px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 2800px; width: 70px;"></div><div class="wk-bg" style="left: 2870px; width: 70px;"></div><div class="wk-bg alt" style="left: 2940px; width: 70px;"></div><div class="wk-bg" style="left: 3010px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 3080px; width: 70px;"></div><div class="wk-bg" style="left: 3150px; width: 70px;"></div><div class="wk-bg alt" style="left: 3220px; width: 70px;"></div><div class="wk-bg" style="left: 3290px; width: 70px;"></div><div class="wk-bg alt" style="left: 3360px; width: 70px;"></div><div class="wk-bg mo" style="left: 3430px; width: 70px;"></div><div class="wk-bg alt" style="left: 3500px; width: 70px;"></div><div class="wk-bg" style="left: 3570px; width: 70px;"></div><div class="wk-bg alt" style="left: 3640px; width: 70px;"></div><div class="wk-bg mo" style="left: 3710px; width: 70px;"></div><div class="wk-bg alt" style="left: 3780px; width: 70px;"></div><div class="wk-bg" style="left: 3850px; width: 70px;"></div><div class="wk-bg alt" style="left: 3920px; width: 70px;"></div><div class="wk-bg" style="left: 3990px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4060px; width: 70px;"></div><div class="wk-bg" style="left: 4130px; width: 70px;"></div><div class="wk-bg alt" style="left: 4200px; width: 70px;"></div><div class="wk-bg" style="left: 4270px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4340px; width: 70px;"></div><div class="wk-bg" style="left: 4410px; width: 70px;"></div><div class="wk-bg alt" style="left: 4480px; width: 70px;"></div><div class="wk-bg" style="left: 4550px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 4620px; width: 70px;"></div><div class="wk-bg" style="left: 4690px; width: 70px;"></div><div class="wk-bg alt" style="left: 4760px; width: 70px;"></div><div class="wk-bg" style="left: 4830px; width: 70px;"></div><div class="wk-bg alt" style="left: 4900px; width: 70px;"></div><div class="wk-bg mo" style="left: 4970px; width: 70px;"></div><div class="wk-bg alt" style="left: 5040px; width: 70px;"></div><div class="wk-bg" style="left: 5110px; width: 70px;"></div><div class="wk-bg alt" style="left: 5180px; width: 70px;"></div><div class="wk-bg mo" style="left: 5250px; width: 70px;"></div><div class="wk-bg alt" style="left: 5320px; width: 70px;"></div><div class="wk-bg" style="left: 5390px; width: 70px;"></div><div class="wk-bg alt" style="left: 5460px; width: 70px;"></div><div class="wk-bg mo" style="left: 5530px; width: 70px;"></div><div class="wk-bg alt" style="left: 5600px; width: 70px;"></div><div class="wk-bg" style="left: 5670px; width: 70px;"></div><div class="wk-bg alt" style="left: 5740px; width: 70px;"></div><div class="wk-bg" style="left: 5810px; width: 70px;"></div><div class="wk-bg alt mo" style="left: 5880px; width: 70px;"></div><div class="wk-bg" style="left: 5950px; width: 70px;"></div><div class="wk-bg alt" style="left: 6020px; width: 70px;"></div><div class="wk-bg" style="left: 6090px; width: 70px;"></div><div class="g-bar" style="left: 1262px; width: 906px; top: 21px; background: linear-gradient(135deg, rgb(255, 84, 127), rgb(225, 29, 72)); color: white; border-radius: 8px;">Bugs &amp; performance</div></div></div></div></div>
 </div>
 
 <!-- BACKLOG ZONE -->
-<div class="backlog-zone" id="backlogZone"></div>
+<div class="backlog-zone" id="backlogZone" style="display: none;"><div class="bl-section">
+      <div class="bl-sec-hdr">
+        <div class="bl-sec-dot" style="background:#22c55e"></div>
+        <span class="bl-sec-title">Ready</span>
+        <button onclick="addBacklogCard('ready')" style="margin-left:8px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bl-sec-line"></div>
+      </div>
+      <div class="bl-cards">
+        <div class="bl-card" onclick="this.classList.toggle('flipped')">
+            <div class="bl-card-inner">
+              <div class="bl-card-front" style="background:linear-gradient(140deg,#0ea5e9,#6366f1)">
+                
+                <div class="bl-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+                <span class="bl-card-name">Archiv Teaser Modul</span>
+                <span class="bl-card-hint">Ready</span>
+              </div>
+              <div class="bl-card-back">
+                <div class="bl-back-label">✨ Feature</div>
+                <div class="bl-back-title">Archiv Teaser Modul</div>
+                <div class="bl-back-desc">Modul im ePaper-Universum zeigt Archiv-Ausgaben mit Stichtag (Heute vor 1, 2, 5, 10 Jahren)</div>
+                <div class="bl-back-flip">↩</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div><div class="bl-section">
+      <div class="bl-sec-hdr">
+        <div class="bl-sec-dot" style="background:#f59e0b"></div>
+        <span class="bl-sec-title">Under Construction</span>
+        <button onclick="addBacklogCard('construction')" style="margin-left:8px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bl-sec-line"></div>
+      </div>
+      <div class="bl-cards">
+        <div class="bl-card" onclick="this.classList.toggle('flipped')">
+            <div class="bl-card-inner">
+              <div class="bl-card-front" style="background:linear-gradient(140deg,#6366f1,#8b5cf6)">
+                
+                <div class="bl-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+                <span class="bl-card-name">Event Tracking</span>
+                <span class="bl-card-hint">In Arbeit</span>
+              </div>
+              <div class="bl-card-back">
+                <div class="bl-back-label">📊 Analytics</div>
+                <div class="bl-back-title">Event Tracking</div>
+                <div class="bl-back-desc">Erfassung von Nutzeraktionen und Nutzerflows zur Verbesserung der Messbarkeit von Gewohnheiten und populären Features.</div>
+                <div class="bl-back-flip">↩</div>
+              </div>
+            </div>
+          </div><div class="bl-card" onclick="this.classList.toggle('flipped')">
+            <div class="bl-card-inner">
+              <div class="bl-card-front" style="background:linear-gradient(140deg,#059669,#0891b2)">
+                
+                <div class="bl-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div>
+                <span class="bl-card-name">Neues Onboarding</span>
+                <span class="bl-card-hint">In Arbeit</span>
+              </div>
+              <div class="bl-card-back">
+                <div class="bl-back-label">🚀 UX</div>
+                <div class="bl-back-title">Neues Onboarding</div>
+                <div class="bl-back-desc">Neuer Erstnutzer-Flow mit Fokus auf Conversion und interaktiven Schritten für personalisiertere App-Erfahrung.</div>
+                <div class="bl-back-flip">↩</div>
+              </div>
+            </div>
+          </div><div class="bl-card" onclick="this.classList.toggle('flipped')">
+            <div class="bl-card-inner">
+              <div class="bl-card-front" style="background:linear-gradient(140deg,#f97316,#ef4444)">
+                
+                <div class="bl-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg></div>
+                <span class="bl-card-name">Article verschenken</span>
+                <span class="bl-card-hint">In Arbeit</span>
+              </div>
+              <div class="bl-card-back">
+                <div class="bl-back-label">🎁 Sharing</div>
+                <div class="bl-back-title">Article verschenken</div>
+                <div class="bl-back-desc">Teilen einzelner Artikel mit Nicht-Abonnenten über temporären Zugangslink — direkt aus der App heraus.</div>
+                <div class="bl-back-flip">↩</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div><div class="bl-section">
+      <div class="bl-sec-hdr">
+        <div class="bl-sec-dot" style="background:#a78bfa"></div>
+        <span class="bl-sec-title">Ideas</span>
+        <button onclick="addBacklogCard('ideas')" style="margin-left:8px;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='var(--accent)';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bl-sec-line"></div>
+      </div>
+      <div class="bl-cards">
+        <div class="bl-card" onclick="this.classList.toggle('flipped')">
+            <div class="bl-card-inner">
+              <div class="bl-card-front" style="background:linear-gradient(140deg,#0d9488,#059669)">
+                
+                <div class="bl-card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line><line x1="17" y1="17" x2="22" y2="17"></line></svg></div>
+                <span class="bl-card-name">Spielfilme</span>
+                <span class="bl-card-hint">Idee</span>
+              </div>
+              <div class="bl-card-back">
+                <div class="bl-back-label">🎬 Video</div>
+                <div class="bl-back-title">Spielfilme</div>
+                <div class="bl-back-desc">Streaming-Plattform für Spielfilme (vg. Schwäbische)</div>
+                <div class="bl-back-flip">↩</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div></div>
 
 <!-- APP PREVIEW ZONE -->
-<div class="preview-zone" id="previewZone"></div>
+<div class="preview-zone" id="previewZone" style="display: none;"><div class="pv-top"><span class="pv-title-bar">📱 Preview</span><button class="btn btn-accent btn-sm" onclick="openAddVersion()">+ Version</button></div><div class="pv-timeline"><div class="pv-ver">
+        <div class="pv-ver-dot"></div>
+        <div class="pv-ver-card">
+          <div class="pv-ver-hdr">
+            <span class="pv-ver-name">14.2.0</span>
+            <span class="pv-ver-date">30. Juni 2026</span>
+            <span class="pv-ver-plat">iOS</span>
+            <div class="pv-ver-actions">
+              <button class="ib" onclick="openEditVersion('ifglzklj')" title="Bearbeiten">✎</button>
+              <button class="ib del" onclick="delVersion('ifglzklj')" title="Löschen">🗑</button>
+            </div>
+          </div>
+          <div class="pv-addressed"><div class="pv-addressed-lbl">✅ Done</div><div class="pv-addressed-text">- half cover
+- tv ipps
+- all4all epaper (styling)</div></div>
+          <div class="pv-shots">
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','i0jklxbt')" ondragover="shotDragOver(event,'ifglzklj','i0jklxbt')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','i0jklxbt')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','i0jklxbt')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-i0jklxbt" src="" alt="IMG_4113" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4113</div>
+        </div>
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','itwl0iuj')" ondragover="shotDragOver(event,'ifglzklj','itwl0iuj')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','itwl0iuj')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','itwl0iuj')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-itwl0iuj" src="" alt="IMG_4114" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4114</div>
+        </div>
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','in9kl2vv')" ondragover="shotDragOver(event,'ifglzklj','in9kl2vv')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','in9kl2vv')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','in9kl2vv')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-in9kl2vv" src="" alt="IMG_4115" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4115</div>
+        </div>
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','ikfc676e')" ondragover="shotDragOver(event,'ifglzklj','ikfc676e')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','ikfc676e')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','ikfc676e')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-ikfc676e" src="" alt="IMG_4116" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4116</div>
+        </div>
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','iajc0op2')" ondragover="shotDragOver(event,'ifglzklj','iajc0op2')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','iajc0op2')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','iajc0op2')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-iajc0op2" src="" alt="IMG_4117" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4117</div>
+        </div>
+        <div class="pv-shot" draggable="true" ondragstart="shotDragStart(event,'ifglzklj','ifmxyx7z')" ondragover="shotDragOver(event,'ifglzklj','ifmxyx7z')" ondragleave="shotDragLeave(event)" ondrop="shotDrop(event,'ifglzklj','ifmxyx7z')" ondragend="shotDragEnd()">
+          <div class="pv-shot-grip">⠿⠿</div>
+          <button class="pv-shot-del" onclick="event.stopPropagation();delShot('ifglzklj','ifmxyx7z')" title="Löschen">✕</button>
+          <div class="pv-shot-img-wrap" onclick="">
+            <img id="pv-img-ifmxyx7z" src="" alt="IMG_4118" loading="lazy">
+          </div>
+          <div class="pv-shot-lbl">IMG_4118</div>
+        </div><div class="pv-shot-add" onclick="openAddShots('ifglzklj')"><span class="pv-shot-add-icon">+</span><span style="font-size:11px">Bilder</span></div></div>
+          <div class="pv-feedback">
+            <div class="pv-feedback-lbl">
+              📝 Feedback
+              <button class="pv-fb-edit-btn" onclick="openEditFeedback('ifglzklj')">✎ bearbeiten</button>
+            </div>
+            <div class="pv-feedback-text">- paginator not sticky
+- paginator backround color (epaper)
+- wording bottom bar (Zeitung, Aktuelles)</div>
+          </div>
+        </div>
+      </div></div></div>
 
 <!-- BUGS ZONE -->
-<div class="bugs-zone" id="bugsZone"></div>
+<div class="bugs-zone" id="bugsZone" style="display: none;"><div class="bug-section">
+      <div class="bug-sec-hdr">
+        <div class="bug-sec-dot" style="background:#dc2626"></div>
+        <span class="bug-sec-title" style="color:#dc2626">Critical</span>
+        <button onclick="addBug('critical')" title="Bug hinzufügen" style="width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='#dc2626';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bug-sec-line"></div>
+        <span style="font-size:11px;font-weight:700;color:var(--muted)">1</span>
+      </div>
+      <div class="bug-list"><div class="bug-ticket" style="border-left-color:#dc2626">
+        <div style="flex:1;min-width:0">
+          <div class="bug-ticket-title">Test-Bug kritisch</div>
+          <div class="bug-ticket-note">Bei Klick auf xy stürzte die App ab (Beispiel)</div>
+        </div>
+        <div class="bug-platforms"><span class="bug-plat" style="background:#16a34a" title="Android">And</span></div>
+        <div class="bug-acts">
+            <button class="ib" onclick="openBugCard('i0uk6ox6')" title="Bearbeiten">✎</button>
+            <button class="ib del" onclick="deleteBug('i0uk6ox6')" title="Löschen">🗑</button>
+          </div>
+      </div></div>
+    </div><div class="bug-section">
+      <div class="bug-sec-hdr">
+        <div class="bug-sec-dot" style="background:#d97706"></div>
+        <span class="bug-sec-title" style="color:#d97706">Major</span>
+        <button onclick="addBug('major')" title="Bug hinzufügen" style="width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='#d97706';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bug-sec-line"></div>
+        <span style="font-size:11px;font-weight:700;color:var(--muted)">1</span>
+      </div>
+      <div class="bug-list"><div class="bug-ticket" style="border-left-color:#d97706">
+        <div style="flex:1;min-width:0">
+          <div class="bug-ticket-title">Test-Bug mittel</div>
+          <div class="bug-ticket-note">Bei Klick auf XY lädt die App sehr lang (Beispiel)</div>
+        </div>
+        <div class="bug-platforms"><span class="bug-plat" style="background:#1c1c1e" title="iOS">iOS</span></div>
+        <div class="bug-acts">
+            <button class="ib" onclick="openBugCard('iy37yw2m')" title="Bearbeiten">✎</button>
+            <button class="ib del" onclick="deleteBug('iy37yw2m')" title="Löschen">🗑</button>
+          </div>
+      </div></div>
+    </div><div class="bug-section">
+      <div class="bug-sec-hdr">
+        <div class="bug-sec-dot" style="background:#2563eb"></div>
+        <span class="bug-sec-title" style="color:#2563eb">Minor</span>
+        <button onclick="addBug('minor')" title="Bug hinzufügen" style="width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .12s,color .12s" onmouseover="this.style.background='#2563eb';this.style.color='white'" onmouseout="this.style.background='var(--surface2)';this.style.color='var(--muted)'">+</button>
+        <div class="bug-sec-line"></div>
+        <span style="font-size:11px;font-weight:700;color:var(--muted)">1</span>
+      </div>
+      <div class="bug-list"><div class="bug-ticket" style="border-left-color:#2563eb">
+        <div style="flex:1;min-width:0">
+          <div class="bug-ticket-title">Test-Bug minor</div>
+          <div class="bug-ticket-note">Wording xy ändern (Beispiel)</div>
+        </div>
+        <div class="bug-platforms"><span class="bug-plat" style="background:#16a34a" title="Android">And</span><span class="bug-plat" style="background:#1c1c1e" title="iOS">iOS</span></div>
+        <div class="bug-acts">
+            <button class="ib" onclick="openBugCard('iro39e66')" title="Bearbeiten">✎</button>
+            <button class="ib del" onclick="deleteBug('iro39e66')" title="Löschen">🗑</button>
+          </div>
+      </div></div>
+    </div></div>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lb-nav" id="lbPrev" onclick="event.stopPropagation();lbNav(-1)">&#8249;</button>
+  <button class="lb-nav" id="lbPrev" onclick="event.stopPropagation();lbNav(-1)">‹</button>
   <img class="lb-img" id="lbImg" alt="" onclick="event.stopPropagation()">
-  <button class="lb-nav" id="lbNext" onclick="event.stopPropagation();lbNav(1)">&#8250;</button>
+  <button class="lb-nav" id="lbNext" onclick="event.stopPropagation();lbNav(1)">›</button>
   <div class="lb-caption" id="lbCaption"></div>
   <button class="lb-close" onclick="closeLightbox()">✕</button>
 </div>
@@ -879,7 +1142,7 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
     <h2>⚙️ GitHub Pages einrichten</h2>
     <p class="sub">Nach einmaliger Einrichtung pushed „Veröffentlichen" die Roadmap direkt auf GitHub Pages — immer unter demselben Link abrufbar.</p>
     <div class="m-err" id="ghErr"></div>
-    <div class="m-ok" id="ghOk"></div>
+    <div class="m-ok" id="ghOk">✓ Verbindung OK! Dein Link: https://rowojtasik.github.io/epaper-roadmap/</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
       <div class="fg">
         <label class="fl">GitHub Username</label>
@@ -902,22 +1165,21 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
     </div>
     <div class="fg">
       <label class="fl">Personal Access Token
-        <a href="https://github.com/settings/tokens/new?scopes=repo&description=Roadmap-Push" target="_blank" style="font-size:11px;color:var(--accent);margin-left:6px">hier erstellen →</a>
+        <a href="https://github.com/settings/tokens/new?scopes=repo&amp;description=Roadmap-Push" target="_blank" style="font-size:11px;color:var(--accent);margin-left:6px">hier erstellen →</a>
       </label>
-      <input type="password" class="fi" id="ghToken" placeholder="ghp_..." autocomplete="off" spellcheck="false"
-        onkeydown="if(event.key==='Enter')saveGhSettings()">
+      <input type="password" class="fi" id="ghToken" placeholder="ghp_..." autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter')saveGhSettings()">
     </div>
-    <div id="ghUrlWrap" style="display:none;margin:10px 0;padding:10px 14px;background:var(--surface2);border-radius:8px;border:1px solid var(--border)">
+    <div id="ghUrlWrap" style="margin: 10px 0px; padding: 10px 14px; background: var(--surface2); border-radius: 8px; border: 1px solid var(--border);">
       <div style="font-size:11px;color:var(--muted);margin-bottom:4px">🔗 Link für Stakeholder (bookmarken)</div>
-      <a id="ghUrlLink" href="#" target="_blank" style="font-size:13px;font-weight:600;color:var(--accent);word-break:break-all"></a>
+      <a id="ghUrlLink" href="https://rowojtasik.github.io/epaper-roadmap/" target="_blank" style="font-size:13px;font-weight:600;color:var(--accent);word-break:break-all">https://rowojtasik.github.io/epaper-roadmap/</a>
     </div>
     <div style="font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.5">
       Repo muss existieren und GitHub Pages aktiviert sein (Settings → Pages → Branch: main, Ordner: /).
     </div>
     <div class="m-acts" style="margin-top:16px">
       <button class="btn btn-outline" onclick="closeGhSettings()">Abbrechen</button>
-      <button class="btn btn-danger" id="ghClearBtn" onclick="clearGhSettings()" style="display:none">Verbindung löschen</button>
-      <button class="btn btn-accent" id="ghSaveBtn" onclick="saveGhSettings()">Speichern & Testen</button>
+      <button class="btn btn-danger" id="ghClearBtn" onclick="clearGhSettings()" style="">Verbindung löschen</button>
+      <button class="btn btn-accent" id="ghSaveBtn" onclick="saveGhSettings()">Speichern &amp; Testen</button>
     </div>
   </div>
 </div>
@@ -926,10 +1188,90 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 <div class="overlay" id="overlay" onclick="overlayClick(event)"></div>
 <div class="panel" id="panel">
   <div class="panel-hdr">
-    <div class="panel-title" id="panelTitle">Bearbeiten</div>
+    <div class="panel-title" id="panelTitle">✏️ Roadmap bearbeiten</div>
     <button class="ib" onclick="closePanel()">✕</button>
   </div>
-  <div class="panel-body" id="panelBody"></div>
+  <div class="panel-body" id="panelBody">
+    <div class="stand-row"><label>Stand-Datum</label>
+      <input type="date" class="fi" id="sdInput" value="2026-07-23" style="flex:1" oninput="D.standDate=this.value;updateStand();markDirty()">
+    </div>
+    <div class="div"></div>
+    <div class="sec-hdr"><span class="sec-ttl">Kategorien</span><button class="btn btn-sm btn-outline" onclick="addCat()">+ Neu</button></div>
+    <div id="catList" style="display:flex;flex-direction:column;gap:6px"><div class="cat-mc">
+      <div class="cat-cdot" style="background:#2563eb"></div>
+      <span class="cat-mlbl">Configuration &amp; development</span>
+      <span style="font-size:11px;color:var(--muted)">2B 0M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('config-dev')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('config-dev')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('config-dev')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#7c3aed"></div>
+      <span class="cat-mlbl">Visiolink QA</span>
+      <span style="font-size:11px;color:var(--muted)">1B 0M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('visiolink-qa')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('visiolink-qa')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('visiolink-qa')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#0891b2"></div>
+      <span class="cat-mlbl">Release to Rumble</span>
+      <span style="font-size:11px;color:var(--muted)">0B 3M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('release')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('release')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('release')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#0d9488"></div>
+      <span class="cat-mlbl">Rumble QA</span>
+      <span style="font-size:11px;color:var(--muted)">2B 0M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('customer-qa')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('customer-qa')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('customer-qa')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#d97706"></div>
+      <span class="cat-mlbl">Submit</span>
+      <span style="font-size:11px;color:var(--muted)">0B 1M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('submit')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('submit')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('submit')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#16a34a"></div>
+      <span class="cat-mlbl">Roll out and clones</span>
+      <span style="font-size:11px;color:var(--muted)">0B 0M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('rollout')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('rollout')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('rollout')" title="Löschen">🗑</button>
+      </div></div><div class="cat-mc">
+      <div class="cat-cdot" style="background:#e11d48"></div>
+      <span class="cat-mlbl">Hypercare</span>
+      <span style="font-size:11px;color:var(--muted)">1B 0M</span>
+      <div class="cat-acts">
+        <button class="ib" onclick="openCatItems('hypercare')" title="Items">📋</button>
+        <button class="ib" onclick="openCatMeta('hypercare')" title="Bearbeiten">✎</button>
+        <button class="ib del" onclick="delCat('hypercare')" title="Löschen">🗑</button>
+      </div></div></div>
+    <div class="div"></div>
+    <div class="sec-hdr"><span class="sec-ttl">Backlog</span><button class="btn btn-sm btn-outline" onclick="openBacklogOverview()">Bearbeiten →</button></div>
+    <div class="div"></div>
+    <div class="sec-hdr"><span class="sec-ttl">Preview</span><button class="btn btn-sm btn-outline" onclick="switchTab('preview');openAddVersion()">+ Version</button></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:2px">1 Version(en) · 6 Screenshot(s)</div>
+    <div class="div"></div>
+    <div class="sec-hdr"><span class="sec-ttl">Bugs</span><button class="btn btn-sm btn-outline" onclick="closePanel();switchTab('bugs')">Bearbeiten →</button></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:2px">1 Critical · 1 Major · 1 Minor</div>
+    <div class="div"></div>
+    <div class="sec-hdr"><span class="sec-ttl">Backup</span></div>
+    <div style="display:flex;gap:8px;margin-bottom:4px">
+      <button class="btn btn-outline btn-sm" style="flex:1" onclick="exportData()">📥 Exportieren</button>
+      <label class="btn btn-outline btn-sm" style="flex:1;cursor:pointer;justify-content:center">
+        📤 Importieren<input type="file" accept=".json" style="display:none" onchange="importData(this)">
+      </label>
+    </div>
+    <div style="font-size:11px;color:var(--muted);line-height:1.5">Exportieren sichert alles inkl. Screenshots lokal. Nach Browser-Clear importieren um alles wiederherzustellen.</div>
+</div>
   <div class="panel-foot" id="panelFoot"></div>
 </div>
 
@@ -938,30 +1280,7 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 //  DATA
 // ══════════════════════════════════════════════
 // @@DATA_START@@
-const INITIAL = {
-  standDate:"2026-07-05",weekStart:18,weekEnd:105,year:2026,
-  categories:[
-    {id:"config-dev",label:"Configuration and development",color:"#2563eb",items:[
-      {id:"cd_ex1",type:"bar",label:"Beispiel-Balken (bitte ersetzen)",weekStart:20,weekEnd:26,track:0}
-    ]},
-    {id:"visiolink-qa",label:"Visiolink QA",color:"#7c3aed",items:[]},
-    {id:"release",label:"Release to Rumble",color:"#0891b2",items:[
-      {id:"r_ex1",type:"milestone",label:"Beispiel-Meilenstein (bitte ersetzen)",week:21}
-    ]},
-    {id:"customer-qa",label:"Rumble QA",color:"#0d9488",items:[]},
-    {id:"submit",label:"Submit",color:"#d97706",items:[]},
-    {id:"rollout",label:"Roll out and clones",color:"#16a34a",items:[]},
-    {id:"hypercare",label:"Hypercare",color:"#e11d48",items:[]}
-  ],
-  backlog:[
-    {id:"bl1",section:"ready",name:"Event Tracking",icon:"chart",gradient:"indigo",label:"📊 Analytics",desc:"Erfassung von Nutzeraktionen in der ePaper-App. Lesegewohnheiten, populäre Artikel und Nutzerflows werden messbar und auswertbar."},
-    {id:"bl2",section:"ready",name:"New Onboarding",icon:"rocket",gradient:"green",label:"🚀 UX",desc:"Neu gestalteter Erstnutzer-Flow mit interaktiven Schritten und personalisierten Empfehlungen für eine bessere App-Einführung."},
-    {id:"bl3",section:"construction",name:"Article Gifting",icon:"gift",gradient:"orange",label:"🎁 Sharing",desc:"Teilen einzelner Artikel mit Nicht-Abonnenten über einen temporären Zugangslink — direkt aus der App heraus."},
-    {id:"bl4",section:"ideas",name:"Rewards",icon:"star",gradient:"violet",label:"🏆 Engagement",desc:"Belohnungssystem für treue Leser — Punkte sammeln, Abzeichen freischalten und exklusive Inhalte erhalten."},
-    {id:"bl5",section:"ideas",name:"Movies",icon:"film",gradient:"teal",label:"🎬 Video",desc:"Integration von Filmkritiken und Trailern direkt in die ePaper-App — für ein erweitertes Medienerlebnis."}
-  ],
-  preview:[]
-};
+const INITIAL={"standDate":"2026-07-23","weekStart":18,"weekEnd":105,"year":2026,"categories":[{"id":"config-dev","label":"Configuration & development","color":"#2563eb","items":[{"id":"cd_ex1","type":"bar","label":"Configuration & development","weekStart":18,"weekEnd":27,"track":0,"note":""},{"id":"iyk6gg34","type":"bar","label":"Fixes & adjustments","weekStart":23,"weekEnd":35,"track":1,"note":""}]},{"id":"visiolink-qa","label":"Visiolink QA","color":"#7c3aed","items":[{"id":"itzmr4q2","type":"bar","label":"Testruns of completed areas","weekStart":22,"weekEnd":33,"track":0,"note":""}]},{"id":"release","label":"Release to Rumble","color":"#0891b2","items":[{"id":"r_ex1","type":"milestone","label":"Release MZ Pt. 1","week":23,"note":"partial functionality"},{"id":"iug6jm1w","type":"milestone","label":"Release MZ Pt.2","week":27,"note":"partial functionality"},{"id":"i00xippa","type":"milestone","label":"Full Release MZ","week":32,"note":"full funcitionality"}]},{"id":"customer-qa","label":"Rumble QA","color":"#0d9488","items":[{"id":"ijyc653e","type":"bar","label":"Test MZ Pt. 1","weekStart":23,"weekEnd":24,"track":0,"note":""},{"id":"iw30dtol","type":"bar","label":"Test MZ Pt.2","weekStart":27,"weekEnd":29,"track":0,"note":""}]},{"id":"submit","label":"Submit","color":"#d97706","items":[{"id":"ip0eapta","type":"milestone","label":"Submit MZ","week":35,"note":"GoLive (if review successful)","icon":"data:image/jpeg;base64,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"}]},{"id":"rollout","label":"Roll out and clones","color":"#16a34a","items":[]},{"id":"hypercare","label":"Hypercare","color":"#e11d48","items":[{"id":"izg83o3o","type":"bar","label":"Bugs & performance","weekStart":36,"weekEnd":48,"track":0,"note":"Project Freeze"}]}],"backlog":[{"id":"bl1","section":"construction","name":"Event Tracking","icon":"chart","gradient":"indigo","label":"📊 Analytics","desc":"Erfassung von Nutzeraktionen und Nutzerflows zur Verbesserung der Messbarkeit von Gewohnheiten und populären Features.","big4":false},{"id":"bl2","section":"construction","name":"Neues Onboarding","icon":"rocket","gradient":"green","label":"🚀 UX","desc":"Neuer Erstnutzer-Flow mit Fokus auf Conversion und interaktiven Schritten für personalisiertere App-Erfahrung.","big4":false},{"id":"bl3","section":"construction","name":"Article verschenken","icon":"gift","gradient":"orange","label":"🎁 Sharing","desc":"Teilen einzelner Artikel mit Nicht-Abonnenten über temporären Zugangslink — direkt aus der App heraus.","big4":false},{"id":"bl5","section":"ideas","name":"Spielfilme","icon":"film","gradient":"teal","label":"🎬 Video","desc":"Streaming-Plattform für Spielfilme (vg. Schwäbische)","big4":false},{"id":"iwmj0eeb","section":"ready","name":"Archiv Teaser Modul","icon":"book","gradient":"blue","label":"✨ Feature","desc":"Modul im ePaper-Universum zeigt Archiv-Ausgaben mit Stichtag (Heute vor 1, 2, 5, 10 Jahren)","big4":false}],"preview":[{"id":"ifglzklj","version":"14.2.0","date":"2026-06-30","platform":"iOS","screenshots":[{"id":"i0jklxbt","name":"IMG_4113"},{"id":"itwl0iuj","name":"IMG_4114"},{"id":"in9kl2vv","name":"IMG_4115"},{"id":"ikfc676e","name":"IMG_4116"},{"id":"iajc0op2","name":"IMG_4117"},{"id":"ifmxyx7z","name":"IMG_4118"}],"feedback":"- paginator not sticky\n- paginator backround color (epaper)\n- wording bottom bar (Zeitung, Aktuelles)","addressed":"- half cover\n- tv ipps\n- all4all epaper (styling)"}],"bugs":[{"id":"i0uk6ox6","severity":"critical","title":"Test-Bug kritisch","platforms":["android"],"note":"Bei Klick auf xy stürzte die App ab (Beispiel)"},{"id":"iy37yw2m","severity":"major","title":"Test-Bug mittel","platforms":["ios"],"note":"Bei Klick auf XY lädt die App sehr lang (Beispiel)"},{"id":"iro39e66","severity":"minor","title":"Test-Bug minor","platforms":["android","ios"],"note":"Wording xy ändern (Beispiel)"}],"_ts":1784827079004,"pwHash":"2198cf12328366e51cc8432f0d1f08d1b78449d760eb3ba912131295e95b8d55"};
 // @@DATA_END@@
 
 // ══════════════════════════════════════════════
@@ -2737,5 +3056,6 @@ document.addEventListener('keydown',e=>{
 });
 init();
 </script>
-</body>
-</html>
+
+
+</body></html>
