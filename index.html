@@ -2198,6 +2198,7 @@ function render(){
       const ms=document.createElement('div');
       ms.className='g-ms';
       const msTop=multi?(12+BH/2):(Math.floor((rh-BH)/2)+BH/2);
+      ms.id='ms-item-'+it.id;
       ms.style.cssText=`left:${mx}px;top:${msTop}px;transform:translateY(-50%)`;
       const inner=it.icon
         ?`<img src="${it.icon}" style="width:100%;height:100%;object-fit:cover">`
@@ -2322,6 +2323,8 @@ async function init(){
   if(location.search.includes('edit'))openAuth();
   renderKwChip();
   scheduleKwUpdate();
+  // Extra pass: fill any media the sync IDB injection missed
+  fillMissingMedia();
 }
 
 // ── Current-week chip ──
@@ -2459,7 +2462,7 @@ function renderPreview(){
           ${editMode?`<div class="pv-shot-grip">⠿⠿</div>`:''}
           <button class="pv-shot-del" onclick="event.stopPropagation();delShot('${v.id}','${s.id}')" title="Löschen">✕</button>
           <div class="pv-shot-img-wrap" onclick="${editMode?'':` openLightboxVer('${v.id}',${si})`}">
-            <img src="${esc(s.src)}" alt="${esc(s.name)}" loading="lazy">
+            <img id="pv-img-${s.id}" src="${s.src?esc(s.src):''}" alt="${esc(s.name)}" loading="lazy">
           </div>
           <div class="pv-shot-lbl">${esc(s.name)}</div>
         </div>`).join('');
@@ -2491,6 +2494,46 @@ function renderPreview(){
     html+=`</div>`;
   }
   z.innerHTML=html;
+  // Async fill any screenshots missing src (IDB injection may have failed during init)
+  fillMissingMedia();
+}
+
+// ── Async media filler (fallback if IDB injection in init() missed anything) ──
+async function fillMissingMedia(){
+  // Screenshots
+  const shots=await idbLoadShots();
+  if(shots.length){
+    const srcMap={};shots.forEach(s=>{if(s.src)srcMap[s.id]=s.src;});
+    (D.preview||[]).forEach(v=>{
+      (v.screenshots||[]).forEach(s=>{
+        if(!s.src&&srcMap[s.id]){
+          s.src=srcMap[s.id];
+          const el=document.getElementById('pv-img-'+s.id);
+          if(el)el.src=srcMap[s.id];
+        }
+      });
+    });
+  }
+  // Milestone icons
+  const icons=await idbLoadMsIcons();
+  if(icons.length){
+    const icMap={};icons.forEach(x=>{if(x.src)icMap[x.id]=x.src;});
+    (D.categories||[]).forEach(c=>{
+      c.items.forEach(it=>{
+        if(!it.icon&&icMap[it.id]){
+          it.icon=icMap[it.id];
+          const msEl=document.getElementById('ms-item-'+it.id);
+          if(msEl){
+            const circle=msEl.querySelector('.ms-circle');
+            if(circle){
+              circle.style.background='white';
+              circle.innerHTML=`<img src="${it.icon}" style="width:100%;height:100%;object-fit:cover">`;
+            }
+          }
+        }
+      });
+    });
+  }
 }
 
 // ── Lightbox ──
