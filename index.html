@@ -304,6 +304,44 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 
 /* ── BUG TRACKER ── */
 .bugs-zone{display:none;padding:36px 40px;max-width:820px;margin:0 auto}
+.data-zone{display:none;flex:1;overflow-y:auto;padding:32px 40px 60px;background:var(--bg);scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent;}
+.dz-wrap{max-width:1180px;margin:0 auto;}
+.dz-top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.dz-title{font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.4px;}
+.dz-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;}
+.dz-demo{background:#fef3c7;color:#92400e;border:1px solid #fde68a;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;}
+.dz-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+.dz-sel{appearance:none;-webkit-appearance:none;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2364748b' stroke-width='1.6' fill='none'/%3E%3C/svg%3E") no-repeat right 11px center;border:1.5px solid var(--border);border-radius:10px;padding:8px 30px 8px 12px;font:inherit;font-size:13px;font-weight:600;color:var(--text);cursor:pointer;}
+.dz-seg{display:inline-flex;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:3px;gap:2px;}
+.dz-seg button{border:none;background:transparent;font:inherit;font-size:12.5px;font-weight:700;color:var(--muted);padding:5px 11px;border-radius:7px;cursor:pointer;}
+.dz-seg button.on{background:var(--accent);color:white;}
+.dz-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px;}
+.dz-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+.dz-kpi-lbl{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.dz-kpi-val{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-.8px;line-height:1.1;}
+.dz-kpi-sub{font-size:12px;color:var(--muted);margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.dz-trend{font-weight:800;font-size:12px;padding:1px 7px;border-radius:6px;}
+.dz-trend.up{background:#dcfce7;color:#15803d;}.dz-trend.down{background:#fee2e2;color:#b91c1c;}.dz-trend.flat{background:#f1f5f9;color:var(--muted);}
+.dz-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:14px;}
+.dz-grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.dz-card-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px;}
+.dz-card-t{font-size:14px;font-weight:800;color:var(--text);letter-spacing:-.2px;}
+.dz-legend{display:flex;gap:12px;font-size:11.5px;font-weight:600;color:var(--muted);}
+.dz-legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:-1px;}
+.dz-bar-row{display:grid;grid-template-columns:minmax(80px,130px) 1fr 52px;align-items:center;gap:10px;margin-bottom:9px;font-size:12.5px;}
+.dz-bar-lbl{color:var(--text);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dz-bar-track{height:9px;background:#f1f5f9;border-radius:999px;overflow:hidden;}
+.dz-bar-fill{height:100%;border-radius:999px;}
+.dz-bar-val{text-align:right;color:var(--muted);font-weight:700;font-size:12px;}
+.dz-rev{padding:12px 0;border-top:1px solid var(--border);}
+.dz-rev:first-child,.dz-card-h+.dz-rev{border-top:none;padding-top:0;}
+.dz-rev-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+.dz-stars{color:#f59e0b;font-size:13px;letter-spacing:1px;}
+.dz-chip{font-size:10px;font-weight:800;letter-spacing:.04em;padding:2px 7px;border-radius:5px;background:#eef2ff;color:var(--accent);}
+.dz-rev-t{font-size:13px;color:var(--text);line-height:1.5;}
+.dz-rev-d{font-size:11px;color:var(--muted);margin-left:auto;}
+.dz-err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;border-radius:12px;padding:12px 16px;font-size:13px;margin-bottom:16px;}
+.dz-loading{padding:60px 0;text-align:center;color:var(--muted);font-size:14px;}
 .bug-section{margin-bottom:38px}
 .bug-sec-hdr{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .bug-sec-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
@@ -727,10 +765,13 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
   .pv-shots{padding:13px 14px;}
   .pv-feedback{margin:0 14px 14px;padding:10px 13px;}
 
-  /* Bugs */
-  .bugs-zone{padding:18px 14px;max-width:100%;}
-  .bug-ticket{flex-wrap:wrap;gap:8px;padding:10px 12px 10px 14px;}
-  .bug-acts{opacity:1;}  /* always visible – no hover on touch */
+  /* Daten */
+  .data-zone{padding:18px 14px 40px;}
+  .dz-kpis{grid-template-columns:1fr 1fr;gap:10px;}
+  .dz-grid,.dz-grid2{grid-template-columns:1fr;gap:10px;margin-bottom:10px;}
+  .dz-card{padding:14px 15px;border-radius:14px;}
+  .dz-kpi-val{font-size:23px;}
+  .dz-sel{flex:1 1 140px;}
 
   /* Modals */
   .modal{padding:24px 20px;}
@@ -753,6 +794,9 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
   .bl-cards{gap:10px;}
 
   .preview-zone{padding:14px 10px 32px;}
+  .data-zone{padding:14px 10px 32px;}
+  .dz-kpi-val{font-size:20px;}
+  .dz-kpi-lbl{font-size:10px;}
   .pv-timeline::before{left:13px;}
   .pv-ver{padding-left:36px;margin-bottom:24px;}
   .pv-ver-dot{left:3px;width:20px;height:20px;}
@@ -815,7 +859,7 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 <nav class="tab-nav">
   <button class="tab-btn active" id="tabRoadmap" onclick="switchTab('roadmap')">📅 Roadmap</button>
   <button class="tab-btn" id="tabPreview" onclick="switchTab('preview')">📱 Preview</button>
-  <button class="tab-btn" id="tabBugs" onclick="switchTab('bugs')">🐛 Bugs</button>
+  <button class="tab-btn" id="tabDaten" onclick="switchTab('daten')">📊 Daten</button>
   <button class="tab-btn" id="tabBacklog" onclick="switchTab('backlog')">📋 Backlog</button>
   <div class="tab-stand">
     <div class="stand-chip"><div class="live-dot"></div><span id="standTxt">Stand: –</span></div>
@@ -833,8 +877,8 @@ body{display:flex;flex-direction:column;height:100vh;overflow:hidden}
 <!-- APP PREVIEW ZONE -->
 <div class="preview-zone" id="previewZone"></div>
 
-<!-- BUGS ZONE -->
-<div class="bugs-zone" id="bugsZone"></div>
+<!-- DATEN ZONE -->
+<div class="data-zone" id="dataZone"></div>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -973,7 +1017,8 @@ const INITIAL = {
     {id:"bl4",section:"ideas",name:"Rewards",icon:"star",gradient:"violet",label:"🏆 Engagement",desc:"Belohnungssystem für treue Leser — Punkte sammeln, Abzeichen freischalten und exklusive Inhalte erhalten."},
     {id:"bl5",section:"ideas",name:"Movies",icon:"film",gradient:"teal",label:"🎬 Video",desc:"Integration von Filmkritiken und Trailern direkt in die ePaper-App — für ein erweitertes Medienerlebnis."}
   ],
-  preview:[]
+  preview:[],
+  dataApiUrl:""
 };
 // @@DATA_END@@
 
@@ -1065,7 +1110,7 @@ async function importData(input){
         for(const it of (c.items||[]))
           if(it.icon)await idbSaveMsIcon(it.id,it.icon).catch(()=>{});
       markDirty();
-      render();renderBacklog();renderPreview();renderBugs();
+      render();renderBacklog();renderPreview();
       closePanel();
     }catch(err){alert('Import fehlgeschlagen: '+err.message);}
   };
@@ -1256,7 +1301,7 @@ function enterEdit(){
   document.body.classList.add('edit-mode');
   // Show GitHub indicator on publish button if configured
   updatePubBtnLabel();
-  render();renderBacklog();renderPreview();renderBugs();
+  render();renderBacklog();renderPreview();
   if(pendingOpen){const fn=pendingOpen;pendingOpen=null;fn();}else{openOverview();}
 }
 function exitEdit(){
@@ -1268,7 +1313,7 @@ function exitEdit(){
   document.getElementById('exitBtn').style.display='none';
   document.getElementById('editPill').classList.remove('on');
   document.body.classList.remove('edit-mode');
-  closePanel();render();renderBacklog();renderPreview();renderBugs();
+  closePanel();render();renderBacklog();renderPreview();
 }
 function updatePubBtnLabel(){
   const btn=document.getElementById('pubBtn');if(!btn)return;
@@ -1493,8 +1538,12 @@ function openOverview(){
     <div class="sec-hdr"><span class="sec-ttl">Preview</span><button class="btn btn-sm btn-outline" onclick="switchTab('preview');openAddVersion()">+ Version</button></div>
     <div style="font-size:12px;color:var(--muted);margin-bottom:2px">${(D.preview||[]).length} Version(en) · ${(D.preview||[]).reduce((s,v)=>s+(v.screenshots||[]).length,0)} Screenshot(s)</div>
     <div class="div"></div>
-    <div class="sec-hdr"><span class="sec-ttl">Bugs</span><button class="btn btn-sm btn-outline" onclick="closePanel();switchTab('bugs')">Bearbeiten →</button></div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:2px">${(D.bugs||[]).filter(b=>b.severity==='critical').length} Critical · ${(D.bugs||[]).filter(b=>b.severity==='major').length} Major · ${(D.bugs||[]).filter(b=>b.severity==='minor').length} Minor</div>
+    <div class="sec-hdr"><span class="sec-ttl">Daten</span><button class="btn btn-sm btn-outline" onclick="closePanel();switchTab('daten')">Öffnen →</button></div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:6px">${D.dataApiUrl?'Live-Daten aus API ✓':'Demodaten aktiv (keine API-URL)'}</div>
+    <div style="display:flex;gap:6px">
+      <input type="url" class="fi" id="dataApiInput" value="${esc(D.dataApiUrl||'')}" placeholder="https://…run.app/dashboard" style="flex:1;font-size:12px">
+      <button class="btn btn-sm btn-accent" onclick="saveDataApiUrl()">OK</button>
+    </div>
     <div class="div"></div>
     <div class="sec-hdr"><span class="sec-ttl">Backup</span></div>
     <div style="display:flex;gap:8px;margin-bottom:4px">
@@ -2382,7 +2431,7 @@ async function init(){
   (_slim.preview||[]).forEach(v=>(v.screenshots||[]).forEach(s=>{delete s.src;}));
   (_slim.categories||[]).forEach(c=>c.items.forEach(it=>{delete it.icon;}));
   saveLocal(_slim);
-  render();renderBacklog();renderPreview();renderBugs();
+  render();renderBacklog();renderPreview();
   switchTab('roadmap');
   if(location.search.includes('edit'))openAuth();
   renderKwChip();
@@ -2787,14 +2836,273 @@ function delShot(verId,shotId){
 }
 
 
+// ══════════════════════════════════════════════
+//  DATEN-TAB: Store-Dashboard (nativ, Daten aus BigQuery via API)
+// ══════════════════════════════════════════════
+// API-Vertrag – GET {D.dataApiUrl}?days=30&publisher=&brand=&platform=
+// Antwort (JSON):
+// { updated:"YYYY-MM-DD",
+//   publishers:[{id,label}], brands:[{id,label,publisher}],
+//   kpis:{ downloads:{value,prev}, rating:{value,prev}, ratings:{value,prev}, crashRate:{value,prev} },  // crashRate in %
+//   series:[{date:"YYYY-MM-DD",ios:n,android:n}],            // Downloads pro Tag
+//   crashSeries:[{date:"YYYY-MM-DD",ios:n,android:n}],       // Crash-Rate pro Tag in %
+//   os:[{label,platform,value}], devices:[{label,platform,value}],
+//   reviews:[{date,brand,platform,rating,text}] }
+// Ohne API-URL (oder bei Fehler) werden Demodaten im selben Format erzeugt.
+const DZ={days:30,publisher:'',brand:'',platform:'',data:null,err:null,demo:true,reqId:0,rt:null};
+const DZ_COL={ios:'#6366f1',android:'#10b981'};
+const DZ_PLAT={ios:'iOS',android:'Android'};
+
+function saveDataApiUrl(){
+  D.dataApiUrl=(document.getElementById('dataApiInput')?.value||'').trim();
+  markDirty();DZ.data=null;openOverview();
+  if(document.getElementById('dataZone').style.display==='block')loadData();
+}
+function dzSet(k,v){DZ[k]=v;if(k==='publisher')DZ.brand='';loadData();}
+
+async function loadData(){
+  const id=++DZ.reqId;DZ.err=null;
+  if(!DZ.data)renderData();
+  const p={days:DZ.days,publisher:DZ.publisher,brand:DZ.brand,platform:DZ.platform};
+  let res,demo=!D.dataApiUrl;
+  try{
+    if(demo)res=dzDemo(p);
+    else{
+      const u=D.dataApiUrl+(D.dataApiUrl.includes('?')?'&':'?')+new URLSearchParams(p).toString();
+      const r=await fetch(u);
+      if(!r.ok)throw new Error('Status '+r.status);
+      res=await r.json();
+    }
+  }catch(e){
+    if(id!==DZ.reqId)return;
+    DZ.err=e.message||'Netzwerkfehler';res=dzDemo(p);demo=true;
+  }
+  if(id!==DZ.reqId)return;
+  DZ.data=res;DZ.demo=demo;renderData();
+}
+
+// ── Formatierung ──
+function dzNum(v){return Math.round(v||0).toLocaleString('de-DE');}
+function dzShort(v){const f=(x,u)=>(x<10?x.toFixed(1).replace(/\.0$/,'').replace('.',','):Math.round(x))+u;return v>=1e6?f(v/1e6,' Mio'):v>=1e3?f(v/1e3,' Tsd'):String(Math.round(v));}
+function dzDate(s){const[y,m,d]=String(s).split('-');return d+'.'+m+'.'+y;}
+function dzTrend(cur,prev,invert,abs){
+  if(prev==null||(!abs&&!prev))return'';
+  const ch=abs?cur-prev:(cur-prev)/prev*100;
+  const flat=abs?Math.abs(ch)<0.01:Math.abs(ch)<0.5;
+  const cls=flat?'flat':((ch>0)!==!!invert?'up':'down');
+  const txt=abs?Math.abs(ch).toFixed(2).replace('.',','):Math.abs(ch).toFixed(1).replace('.',',')+' %';
+  return`<span class="dz-trend ${cls}">${flat?'±':ch>0?'▲':'▼'} ${txt}</span>`;
+}
+
+// ── Rendering ──
+function renderData(){
+  const z=document.getElementById('dataZone');if(!z)return;
+  const d=DZ.data;
+  const pubs=d?.publishers||[];
+  const brs=(d?.brands||[]).filter(b=>!DZ.publisher||b.publisher===DZ.publisher);
+  const opt=(v,l,sel)=>`<option value="${esc(v)}"${v===sel?' selected':''}>${esc(l)}</option>`;
+  const seg=(k,items)=>`<div class="dz-seg">${items.map(([v,l])=>
+    `<button class="${String(DZ[k])===String(v)?'on':''}" onclick="dzSet('${k}',${typeof v==='number'?v:`'${v}'`})">${l}</button>`).join('')}</div>`;
+  let h=`<div class="dz-wrap">
+    <div class="dz-top">
+      <span class="dz-title">📊 Store-Daten</span>
+      <span class="dz-meta">${DZ.demo?'<span class="dz-demo">Demodaten</span>':''}${d?.updated?'Stand: '+dzDate(d.updated):''}</span>
+    </div>
+    <div class="dz-filters">
+      <select class="dz-sel" onchange="dzSet('publisher',this.value)">${opt('','Alle Verlage',DZ.publisher)}${pubs.map(p=>opt(p.id,p.label,DZ.publisher)).join('')}</select>
+      <select class="dz-sel" onchange="dzSet('brand',this.value)">${opt('','Alle Marken',DZ.brand)}${brs.map(b=>opt(b.id,b.label,DZ.brand)).join('')}</select>
+      ${seg('platform',[['','Alle'],['ios','iOS'],['android','Android']])}
+      ${seg('days',[[7,'7 Tage'],[30,'30 Tage'],[90,'90 Tage']])}
+    </div>`;
+  if(DZ.err)h+=`<div class="dz-err">⚠️ Live-Daten nicht erreichbar (${esc(DZ.err)}). Angezeigt werden Demodaten.</div>`;
+  if(!d){z.innerHTML=h+`<div class="dz-loading">Lade Daten …</div></div>`;return;}
+
+  const k=d.kpis||{};
+  const tile=(lbl,val,sub)=>`<div class="dz-card"><div class="dz-kpi-lbl">${lbl}</div><div class="dz-kpi-val">${val}</div><div class="dz-kpi-sub">${sub}</div></div>`;
+  const vs='<span>vs. Vorperiode</span>';
+  h+=`<div class="dz-kpis">
+    ${tile('Downloads',dzNum(k.downloads?.value),dzTrend(k.downloads?.value,k.downloads?.prev)+vs)}
+    ${tile('Ø Rating',(k.rating?.value??0).toFixed(2).replace('.',',')+' <span style="color:#f59e0b;font-size:20px">★</span>',dzTrend(k.rating?.value,k.rating?.prev,false,true)+vs)}
+    ${tile('Neue Bewertungen',dzNum(k.ratings?.value),dzTrend(k.ratings?.value,k.ratings?.prev)+vs)}
+    ${tile('Crash-Rate',(k.crashRate?.value??0).toFixed(2).replace('.',',')+' %',dzTrend(k.crashRate?.value,k.crashRate?.prev,true)+vs)}
+  </div>`;
+
+  const plats=DZ.platform?[DZ.platform]:['ios','android'];
+  const legend=`<div class="dz-legend">${plats.map(p=>`<span><i style="background:${DZ_COL[p]}"></i>${DZ_PLAT[p]}</span>`).join('')}</div>`;
+  h+=`<div class="dz-grid">
+    <div class="dz-card"><div class="dz-card-h"><span class="dz-card-t">Downloads pro Tag</span>${legend}</div><div id="dzLine"></div></div>
+    <div class="dz-card"><div class="dz-card-h"><span class="dz-card-t">OS-Versionen</span></div>${dzBars(d.os||[],8)}</div>
+  </div>
+  <div class="dz-grid">
+    <div class="dz-card"><div class="dz-card-h"><span class="dz-card-t">Crash-Rate pro Tag</span>${legend}</div><div id="dzCrash"></div></div>
+    <div class="dz-card"><div class="dz-card-h"><span class="dz-card-t">Top-Geräte</span></div>${dzBars(d.devices||[],8)}</div>
+  </div>
+  <div class="dz-card"><div class="dz-card-h"><span class="dz-card-t">Neueste Reviews</span></div>${dzReviews(d.reviews||[])}</div>
+  </div>`;
+  z.innerHTML=h;
+  dzDrawLine();
+}
+
+function dzBars(items,max){
+  if(!items.length)return`<div class="bug-empty">Keine Daten.</div>`;
+  // Anteil = Wert / Downloads der Plattform im Zeitraum (aus series)
+  const tot={};(DZ.data?.series||[]).forEach(r=>{tot.ios=(tot.ios||0)+(r.ios||0);tot.android=(tot.android||0)+(r.android||0);});
+  const rows=items.map(i=>({...i,pct:tot[i.platform]?i.value/tot[i.platform]*100:0}))
+    .sort((a,b)=>b.pct-a.pct).slice(0,max);
+  const top=Math.max(...rows.map(r=>r.pct),1);
+  return rows.map(r=>`<div class="dz-bar-row">
+    <span class="dz-bar-lbl" title="${esc(r.label)}">${esc(r.label)}</span>
+    <div class="dz-bar-track"><div class="dz-bar-fill" style="width:${(r.pct/top*100).toFixed(1)}%;background:${DZ_COL[r.platform]||'var(--accent)'}"></div></div>
+    <span class="dz-bar-val">${r.pct.toFixed(1).replace('.',',')} %</span>
+  </div>`).join('');
+}
+
+function dzReviews(list){
+  if(!list.length)return`<div class="bug-empty">Keine Reviews im Zeitraum.</div>`;
+  return list.slice(0,6).map(r=>`<div class="dz-rev">
+    <div class="dz-rev-h">
+      <span class="dz-stars">${'★'.repeat(r.rating)}<span style="color:#e2e8f0">${'★'.repeat(5-r.rating)}</span></span>
+      <span class="dz-chip">${esc(r.brand)}</span>
+      <span class="dz-chip" style="background:${DZ_COL[r.platform]}18;color:${DZ_COL[r.platform]}">${DZ_PLAT[r.platform]||esc(r.platform)}</span>
+      <span class="dz-rev-d">${dzDate(r.date)}</span>
+    </div>
+    <div class="dz-rev-t">${esc(r.text)}</div>
+  </div>`).join('');
+}
+
+function dzDrawLine(){
+  if(!DZ.data)return;
+  dzChart('dzLine',DZ.data.series||[],(v)=>dzShort(v),1);
+  dzChart('dzCrash',DZ.data.crashSeries||[],(v,st)=>v.toFixed(st<.1?2:st<1?1:0).replace('.',',')+' %',0.01);
+}
+function dzChart(elId,s,fmt,minMax){
+  const el=document.getElementById(elId);if(!el)return;
+  const plats=DZ.platform?[DZ.platform]:['ios','android'];
+  const W=Math.max(el.clientWidth,260),H=W<500?180:230,pl=50,pr=8,pt=8,pb=24;
+  if(!s.length){el.innerHTML='<div class="bug-empty">Keine Daten.</div>';return;}
+  const max=Math.max(minMax,...s.flatMap(r=>plats.map(p=>r[p]||0)));
+  const mag=Math.pow(10,Math.floor(Math.log10(max/4)));
+  const step=[1,2,2.5,5,10].map(m=>m*mag).find(v=>v*4>=max)||mag*10;
+  const top=step*4;
+  const x=i=>pl+(W-pl-pr)*(s.length<2?.5:i/(s.length-1));
+  const y=v=>pt+(H-pt-pb)*(1-v/top);
+  let g='';
+  for(let i=0;i<=4;i++){
+    const yy=y(step*i);
+    g+=`<line x1="${pl}" x2="${W-pr}" y1="${yy}" y2="${yy}" stroke="#eef2f7"/>
+        <text x="${pl-8}" y="${yy+4}" text-anchor="end" font-size="11" fill="#94a3b8">${fmt(step*i,step)}</text>`;
+  }
+  const every=Math.ceil(s.length/(W<500?4:7));
+  s.forEach((r,i)=>{if(i%every===0||i===s.length-1&&i%every>every/2){
+    const[,m,d]=r.date.split('-');
+    g+=`<text x="${x(i)}" y="${H-6}" text-anchor="${i===s.length-1?'end':i===0?'start':'middle'}" font-size="11" fill="#94a3b8">${d}.${m}.</text>`;
+  }});
+  plats.forEach(p=>{
+    const pts=s.map((r,i)=>`${x(i).toFixed(1)},${y(r[p]||0).toFixed(1)}`);
+    g+=`<path d="M${pts.join('L')}L${x(s.length-1)},${y(0)}L${x(0)},${y(0)}Z" fill="${DZ_COL[p]}" opacity=".08"/>
+        <path d="M${pts.join('L')}" fill="none" stroke="${DZ_COL[p]}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  el.innerHTML=`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="display:block;font-family:inherit">${g}</svg>`;
+}
+window.addEventListener('resize',()=>{
+  clearTimeout(DZ.rt);
+  DZ.rt=setTimeout(()=>{if(document.getElementById('dataZone')?.style.display==='block')dzDrawLine();},150);
+});
+
+// ── Demodaten (gleiches Format wie die API) ──
+const DZ_DEMO_PUB=[{id:'v1',label:'Verlag A'},{id:'v2',label:'Verlag B'},{id:'v3',label:'Verlag C'},{id:'v4',label:'Verlag D'}];
+const DZ_DEMO_BR=[
+  {id:'m1',label:'Marke 1',publisher:'v1',size:14000,rt:4.4,cr:.6},
+  {id:'m2',label:'Marke 2',publisher:'v1',size:6000,rt:4.1,cr:.9},
+  {id:'m3',label:'Marke 3',publisher:'v1',size:3500,rt:3.9,cr:1.3},
+  {id:'m4',label:'Marke 4',publisher:'v2',size:11000,rt:4.5,cr:.5},
+  {id:'m5',label:'Marke 5',publisher:'v2',size:4200,rt:4.2,cr:.8},
+  {id:'m6',label:'Marke 6',publisher:'v3',size:8000,rt:4.0,cr:1.1},
+  {id:'m7',label:'Marke 7',publisher:'v3',size:2600,rt:4.3,cr:.7},
+  {id:'m8',label:'Marke 8',publisher:'v4',size:9500,rt:4.6,cr:.4},
+  {id:'m9',label:'Marke 9',publisher:'v4',size:3000,rt:3.8,cr:1.4}
+];
+function dzRand(seed){let s=(seed>>>0)||1;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296;};}
+function dzDemo(p){
+  const days=+p.days||30;
+  let brands=DZ_DEMO_BR.filter(b=>(!p.publisher||b.publisher===p.publisher)&&(!p.brand||b.id===p.brand));
+  if(!brands.length)brands=DZ_DEMO_BR.slice(0,1);
+  const plats=p.platform?[p.platform]:['ios','android'];
+  const today=new Date();today.setHours(12,0,0,0);
+  const series=[],crashSeries=[];let cur=0,prev=0;const platTot={ios:0,android:0};
+  const cr={cur:[0,0],prev:[0,0]}; // [gewichtete Summe, Gewicht]
+  const spike=Math.max(2,Math.round(days*.55)); // simuliertes fehlerhaftes Release
+  for(let i=2*days;i>=1;i--){
+    const d=new Date(today);d.setDate(d.getDate()-i);
+    const row={date:d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),ios:0,android:0};
+    const wk=[1.22,.9,.95,.97,1,1.06,1.2][d.getDay()];
+    const dayNo=Math.floor(d.getTime()/864e5);
+    const crow={date:row.date,ios:0,android:0},cw={ios:0,android:0};
+    brands.forEach(b=>plats.forEach(pl=>{
+      const r=dzRand(b.size+dayNo*977+(pl==='ios'?31:0));
+      const growth=1+(2*days-i)/(2*days)*.1;
+      const dl=Math.round(b.size/30*(pl==='ios'?.42:.58)*wk*growth*(.8+r()*.4));
+      row[pl]+=dl;
+      const trend=1.12-(2*days-i)/(2*days)*.14;
+      const bump=(pl==='android'&&(i===spike||i===spike-1))?2.1:1;
+      const rate=b.cr*(pl==='ios'?.75:1.15)*trend*bump*(.85+r()*.3);
+      crow[pl]+=rate*dl;cw[pl]+=dl;
+    }));
+    plats.forEach(pl=>{const k=i<=days?'cur':'prev';cr[k][0]+=crow[pl];cr[k][1]+=cw[pl];crow[pl]=cw[pl]?+(crow[pl]/cw[pl]).toFixed(3):0;});
+    const sum=row.ios+row.android;
+    if(i<=days){series.push(row);crashSeries.push(crow);cur+=sum;platTot.ios+=row.ios;platTot.android+=row.android;}else prev+=sum;
+  }
+  const w=brands.reduce((a,b)=>a+b.size,0);
+  const rating=brands.reduce((a,b)=>a+b.rt*b.size,0)/w;
+  const os=[],devices=[];
+  if(plats.includes('ios')){
+    [['iOS 26',.52],['iOS 18',.33],['iOS 17',.1],['iOS älter',.05]].forEach(([l,s])=>os.push({label:l,platform:'ios',value:platTot.ios*s}));
+    [['iPhone 16',.21],['iPhone 15',.18],['iPhone 17',.14],['iPhone 13',.12],['iPad (alle)',.1]].forEach(([l,s])=>devices.push({label:l,platform:'ios',value:platTot.ios*s}));
+  }
+  if(plats.includes('android')){
+    [['Android 16',.31],['Android 15',.29],['Android 14',.19],['Android 13',.12],['Android älter',.09]].forEach(([l,s])=>os.push({label:l,platform:'android',value:platTot.android*s}));
+    [['Galaxy S25',.09],['Galaxy A55',.08],['Galaxy S24',.07],['Pixel 9',.04],['Galaxy Tab S9',.04]].forEach(([l,s])=>devices.push({label:l,platform:'android',value:platTot.android*s}));
+  }
+  const texts=[
+    [5,'Liest sich super auf dem Tablet, Ausgabe ist morgens immer pünktlich da.'],
+    [4,'Gute App, aber der Download der Ausgabe dauert manchmal etwas.'],
+    [2,'Seit dem letzten Update stürzt die App beim Öffnen der Beilage ab.'],
+    [5,'Endlich die Zeitung digital wie gedruckt, sehr übersichtlich.'],
+    [3,'Funktioniert, aber die Suche könnte besser sein.'],
+    [1,'Login klappt nach dem Update nicht mehr.'],
+    [4,'Vorlesefunktion ist klasse, bitte mehr davon.']
+  ];
+  const rr=dzRand(days*7+brands.length+(p.platform||'').length);
+  const reviews=texts.map((t,i)=>{
+    const d=new Date(today);d.setDate(d.getDate()-1-Math.floor(i*days/10));
+    const b=brands[Math.floor(rr()*brands.length)];
+    return{date:d.toISOString().slice(0,10),brand:b.label,platform:plats[Math.floor(rr()*plats.length)],rating:t[0],text:t[1]};
+  });
+  const y=new Date(today);y.setDate(y.getDate()-1);
+  return{
+    updated:y.toISOString().slice(0,10),
+    publishers:DZ_DEMO_PUB,
+    brands:DZ_DEMO_BR.map(({id,label,publisher})=>({id,label,publisher})),
+    kpis:{
+      downloads:{value:cur,prev},
+      rating:{value:rating,prev:rating-.04},
+      ratings:{value:Math.round(cur*.011),prev:Math.round(prev*.012)},
+      crashRate:{value:cr.cur[1]?cr.cur[0]/cr.cur[1]:0,prev:cr.prev[1]?cr.prev[0]/cr.prev[1]:0}
+    },
+    series,crashSeries,os,devices,reviews
+  };
+}
+
 function switchTab(tab){
-  ['roadmap','backlog','preview','bugs'].forEach(t=>{
-    document.getElementById('tab'+t.charAt(0).toUpperCase()+t.slice(1)).classList.toggle('active',t===tab);
+  ['roadmap','backlog','preview','daten'].forEach(t=>{
+    const el=document.getElementById('tab'+t.charAt(0).toUpperCase()+t.slice(1));
+    if(el)el.classList.toggle('active',t===tab);
   });
   document.querySelector('.gantt-zone').style.display=tab==='roadmap'?'':'none';
   document.getElementById('backlogZone').style.display=tab==='backlog'?'block':'none';
   document.getElementById('previewZone').style.display=tab==='preview'?'block':'none';
-  document.getElementById('bugsZone').style.display=tab==='bugs'?'block':'none';
+  document.getElementById('dataZone').style.display=tab==='daten'?'block':'none';
+  if(tab==='daten'){if(DZ.data)renderData();else loadData();}
 }
 function toggleLogoMenu(e){
   e.stopPropagation();
